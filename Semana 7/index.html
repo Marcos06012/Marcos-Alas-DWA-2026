@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía 07 - Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Barra de navegación rápida entre las dos secciones de la guía -->
+  <div class="bg-secondary text-white text-center py-2 small">
+    <a href="#ejercicios" class="link-light text-decoration-none me-3">Ejercicios preparatorios</a>
+    <a href="#sitio" class="link-light text-decoration-none">Actividad evaluada (sitio completo)</a>
+  </div>
+
+  <section id="ejercicios" class="bg-light border-bottom">
+  <div class="container py-5">
+    <h2 class="mb-1">Ejercicios preparatorios <span class="badge bg-secondary align-middle">Nivel básico</span></h2>
+    <p class="text-muted mb-4">Cada ejercicio queda en su propia tarjeta, en el orden en que lo pide la guía.</p>
+
+    <div class="row g-4">
+      <!-- Ejercicio 1 - Container y grid -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge rounded-pill bg-primary">1</span> Container y grid
+          </div>
+          <div class="card-body">
+            <div class="container border rounded py-2">
+              <div class="row text-center">
+                <div class="col border-end">Columna 1</div>
+                <div class="col border-end">Columna 2</div>
+                <div class="col">Columna 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 2 - Tipografía -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge rounded-pill bg-primary">2</span> Tipografía
+          </div>
+          <div class="card-body">
+            <h1 class="display-4">Bienes Raíces Cuscatlán</h1>
+            <h2 class="h4 mb-0">Encuentra tu próxima propiedad</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 3 - Colores contextuales -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge rounded-pill bg-primary">3</span> Colores contextuales
+          </div>
+          <div class="card-body">
+            <div class="bg-primary text-white p-3 rounded mb-2">Aviso destacado</div>
+            <p class="text-success mb-0">Disponible</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 4 - Márgenes y padding -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge rounded-pill bg-primary">4</span> Márgenes y padding
+          </div>
+          <div class="card-body">
+            <div class="mt-2 mb-2 p-3 border rounded">
+              Contenido con espaciado controlado por utilidades de Bootstrap.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="sitio">
+  <div class="bg-primary text-white text-center py-4">
+    <span class="badge bg-light text-primary mb-2">Actividad evaluada — Nivel intermedio</span>
+    <h2 class="mb-1">Sitio "Bienes Raíces Cuscatlán"</h2>
+    <p class="mb-0 small text-white-75">Navbar responsivo + banner con carousel + cards, con modales de detalle (retos autónomos).</p>
+  </div>
+
+  <!-- Paso 1 - Navbar responsivo -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Propiedades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Paso 2 - Banner central (con Carousel del reto autónomo) -->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="bg-primary text-white text-center py-5">
+          <h1 class="display-5">Encuentra tu próxima propiedad</h1>
+          <p class="lead">Casas y apartamentos en las mejores zonas de San Salvador</p>
+          <a href="#contacto" class="btn btn-light">Contacto</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-secondary text-white text-center py-5">
+          <h1 class="display-5">Zonas exclusivas</h1>
+          <p class="lead">Escalón, Santa Elena y Merliot</p>
+          <a href="#contacto" class="btn btn-light">Contacto</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-dark text-white text-center py-5">
+          <h1 class="display-5">Financiamiento disponible</h1>
+          <p class="lead">Te asesoramos con la mejor opción bancaria</p>
+          <a href="#contacto" class="btn btn-light">Contacto</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Paso 3 - Tres columnas con cards -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/casa1.jpg" class="card-img-top" alt="Propiedad 1" style="height:220px;object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Propiedad 1</h5>
+            <p class="card-text">Casa de una planta en Colonia Escalón, 3 habitaciones, 2 baños.</p>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#modalPropiedad1">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/casa2.jpg" class="card-img-top" alt="Propiedad 2" style="height:220px;object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Propiedad 2</h5>
+            <p class="card-text">Apartamento moderno en Santa Elena, 2 habitaciones, amueblado.</p>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#modalPropiedad2">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/casa3.jpg" class="card-img-top" alt="Propiedad 3" style="height:220px;object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Propiedad 3</h5>
+            <p class="card-text">Residencia con piscina en Merliot, 4 habitaciones, jardín amplio.</p>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#modalPropiedad3">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de contacto (destino del botón del banner) -->
+  <div id="contacto" class="container text-center my-5">
+    <h3>¿Interesado en alguna propiedad?</h3>
+    <p>Contáctanos y con gusto te asesoramos.</p>
+  </div>
+
+
+  <div class="modal fade" id="modalPropiedad1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Propiedad 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/casa1.jpg" class="img-fluid rounded mb-3" alt="Propiedad 1">
+          <p>Casa de una planta en Colonia Escalón, 3 habitaciones, 2 baños, cochera para 2 vehículos y patio trasero.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPropiedad2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Propiedad 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/casa2.jpg" class="img-fluid rounded mb-3" alt="Propiedad 2">
+          <p>Apartamento moderno en Santa Elena, 2 habitaciones, amueblado, con acceso a gimnasio y piscina comunal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPropiedad3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Propiedad 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/casa3.jpg" class="img-fluid rounded mb-3" alt="Propiedad 3">
+          <p>Residencia con piscina en Merliot, 4 habitaciones, jardín amplio y área social techada.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
