@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Personal - Desarrollo de Software</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 56px; }
+    .carousel-item img { height: 480px; object-fit: cover; }
+    .carousel-caption-fija {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 1rem;
+      border-radius: 0 0 .375rem .375rem;
+    }
+    .card img { height: 220px; object-fit: cover; }
+    footer a { color: #cfe2ff; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar personalizado, siempre visible (fixed-top) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">&lt;/&gt; Portafolio Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Link</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#servicios">Servicios</a></li>
+              <li><a class="dropdown-item" href="#faq">Preguntas frecuentes</a></li>
+              <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a></li>
+        </ul>
+        <span class="navbar-text text-white">
+          ✉️ <a href="mailto:tu.nombre@alumno.itca.edu.sv" class="text-white text-decoration-none">tu.nombre@alumno.itca.edu.sv</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Slider con 3 imágenes y su explicación debajo -->
+  <div id="inicio" class="container-fluid p-0">
+    <div id="sliderPrincipal" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slide1.jpg" class="d-block w-100" alt="Programación">
+          <div class="carousel-caption carousel-caption-fija">
+            <h5>Desarrollo de software</h5>
+            <p>Construyo aplicaciones web con buenas prácticas y código limpio.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide2.jpg" class="d-block w-100" alt="Espacio de trabajo">
+          <div class="carousel-caption carousel-caption-fija">
+            <h5>Diseño y planificación</h5>
+            <p>Cada proyecto inicia con una etapa de análisis y diseño de la solución.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide3.jpg" class="d-block w-100" alt="Trabajo en equipo">
+          <div class="carousel-caption carousel-caption-fija">
+            <h5>Trabajo en equipo</h5>
+            <p>Colaboro con otros desarrolladores usando control de versiones y buenas prácticas ágiles.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 3 secciones con imagen, texto y botón "Más información" -->
+  <section id="servicios" class="container my-5">
+    <h2 class="text-center mb-2">Áreas de trabajo</h2>
+    <p class="text-center text-muted mb-4">Un vistazo a los tipos de proyectos en los que puedo colaborar.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/desktop-app.jpg" class="card-img-top" alt="Aplicación de escritorio">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Desktop Application</h5>
+            <p class="card-text">Aplicaciones de escritorio a la medida, pensadas para procesos internos de negocio.</p>
+            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#infoDesktop">Más información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/mobile-app.jpg" class="card-img-top" alt="Aplicación móvil">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Mobile Application</h5>
+            <p class="card-text">Apps móviles responsivas, con foco en la experiencia del usuario final.</p>
+            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#infoMobile">Más información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/web-app.jpg" class="card-img-top" alt="Aplicación web">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Web Application</h5>
+            <p class="card-text">Sitios y aplicaciones web adaptables, con HTML, CSS, JavaScript y Bootstrap.</p>
+            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#infoWeb">Más información</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modales de "Más información" para cada sección -->
+  <div class="modal fade" id="infoDesktop" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Desktop Application</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Desarrollo de sistemas de escritorio en tecnologías como .NET, Java o Electron, integrando bases de datos locales o en red.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="infoMobile" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mobile Application</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Construcción de interfaces móviles adaptables, consumiendo APIs REST y aplicando principios de diseño responsivo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="infoWeb" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Web Application</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Sitios y aplicaciones web usando HTML5, CSS3, JavaScript y frameworks como Bootstrap para un diseño adaptable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acordeón con 4 opciones -->
+  <section id="faq" class="container my-5">
+    <h2 class="text-center mb-4">Sobre mí</h2>
+    <div class="accordion" id="acordeonPerfil">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colapso1">
+            Formación académica
+          </button>
+        </h2>
+        <div id="colapso1" class="accordion-collapse collapse show" data-bs-parent="#acordeonPerfil">
+          <div class="accordion-body">
+            Estudiante de Ingeniería en Desarrollo de Software, cursando el módulo de Diseño Web Adaptable.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapso2">
+            Habilidades técnicas
+          </button>
+        </h2>
+        <div id="colapso2" class="accordion-collapse collapse" data-bs-parent="#acordeonPerfil">
+          <div class="accordion-body">
+            HTML5, CSS3, JavaScript, Bootstrap y buenas prácticas de diseño adaptable.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapso3">
+            Proyectos destacados
+          </button>
+        </h2>
+        <div id="colapso3" class="accordion-collapse collapse" data-bs-parent="#acordeonPerfil">
+          <div class="accordion-body">
+            Ejercicios prácticos del módulo DWA: catálogos interactivos, sitios con Bootstrap y componentes dinámicos con JavaScript.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapso4">
+            Contacto
+          </button>
+        </h2>
+        <div id="colapso4" class="accordion-collapse collapse" data-bs-parent="#acordeonPerfil">
+          <div id="contacto" class="accordion-body">
+            Correo institucional: <a href="mailto:tu.nombre@alumno.itca.edu.sv">tu.nombre@alumno.itca.edu.sv</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer con información personal -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-1"><strong>Tu Nombre Completo</strong></p>
+    <p class="mb-1">Carné: 00000000</p>
+    <p class="mb-0">Grupo: XX</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
