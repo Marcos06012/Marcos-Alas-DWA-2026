@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artesanías Ilobasco - Catálogo interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Artesanías Ilobasco</h1>
+    <div class="resumen" id="resumen">
+      <span>🛒 <strong id="carritoCantidad">0</strong> artículos</span>
+      <span>Total: $<strong id="carritoTotal">0.00</strong></span>
+    </div>
+  </header>
+
+  <div id="aviso" class="aviso" hidden></div>
+
+  <main class="container">
+    <div class="buscador">
+      <label for="busqueda">Buscar producto</label>
+      <input type="text" id="busqueda" placeholder="Ej: cofre, hamaca, sartén..." autocomplete="off" />
+    </div>
+
+    <p id="sinResultados" class="sin-resultados" hidden>No se encontraron productos.</p>
+
+    <div id="catalogo" class="catalogo"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

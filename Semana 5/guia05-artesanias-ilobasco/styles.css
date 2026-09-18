@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f5f1ea;
+  color: #3a2c1d;
+}
+
+.topbar {
+  background: #7a3b1e;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.resumen {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.aviso {
+  background: #fff3cd;
+  color: #664d03;
+  border-bottom: 1px solid #ffe69c;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+
+.buscador input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #c9b8a3;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.sin-resultados {
+  text-align: center;
+  color: #7a3b1e;
+  font-style: italic;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid #e0d3c0;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.tarjeta:hover,
+.tarjeta.resaltada {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(122, 59, 30, 0.25);
+  background: #fdf6ee;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.tarjeta .categoria {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #7a3b1e;
+  background: #f0e2d0;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta .precio {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tarjeta .stock {
+  font-size: 0.85rem;
+  color: #5a4a37;
+  margin-top: 0.25rem;
+}
+
+.tarjeta.bajo-stock {
+  border-color: #d9822b;
+}
+
+.tarjeta.bajo-stock .stock {
+  color: #b45c00;
+  font-weight: bold;
+}
+
+.tarjeta.sin-stock {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
