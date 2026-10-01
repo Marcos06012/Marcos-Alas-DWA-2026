@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1: Registro de Estudiante</h2>
+    <form>
+        <label>Carnet:</label><br>
+        <input type="text" id="carnet" placeholder="Ej: AB12345"><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre" placeholder="Tu nombre"><br><br>
+
+        <label>Teléfono:</label><br>
+        <input type="text" id="telefono" placeholder="(999) 9999-9999"><br><br>
+
+        <label>Carrera:</label><br>
+        <input type="text" id="carrera" placeholder="Tu carrera"><br><br>
+
+        <button type="button" onclick="guardarEstudiante()">Guardar Estudiante</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <hr>
+
+    <script src="ejercicio.js"></script>
+</body>
+
+</html>
